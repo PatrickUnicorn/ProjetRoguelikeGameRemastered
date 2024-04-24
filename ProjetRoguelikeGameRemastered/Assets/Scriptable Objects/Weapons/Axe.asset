@@ -17,8 +17,8 @@ MonoBehaviour:
   evolutionData: []
   behaviour: AxeWeapon
   baseStats:
-    name: Axe
-    description: High damage, high Area scaling.
+    name: Hache
+    description: "D\xE9g\xE2ts \xE9lev\xE9s, grande \xE9chelle de zone."
     projectilePrefab: {fileID: 4123953034058973966, guid: 1098dc215c9789245ac762d662223559, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
     maxInstances: 99
   linearGrowth:
   - name: Level 2
-    description: Fires 1 more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -63,7 +63,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 3
-    description: Base Damage up by 20.
+    description: "D\xE9g\xE2ts de base augment\xE9s de 20."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -85,7 +85,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 4
-    description: Passes through 2 more enemies.
+    description: Traverse deux ennemis de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
     piercing: 2
     maxInstances: 0
   - name: Level 5
-    description: Base Damage up by 20.
+    description: "D\xE9g\xE2ts de base augment\xE9s de 20."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 6
-    description: Fires 1 more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -151,7 +151,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 7
-    description: Passes through 2 more enemies.
+    description: Traverse deux ennemis de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
     piercing: 2
     maxInstances: 0
   - name: Level 8
-    description: Base Damage up by 20.
+    description: "D\xE9g\xE2ts de base augment\xE9s de 20."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

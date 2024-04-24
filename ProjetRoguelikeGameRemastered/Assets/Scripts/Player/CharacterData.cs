@@ -5,6 +5,7 @@ public class CharacterData : ScriptableObject
 {
     [SerializeField]
     Sprite icon;
+    public RuntimeAnimatorController animator;
     public Sprite Icon { get => icon; private set => icon = value; }
 
     [SerializeField]

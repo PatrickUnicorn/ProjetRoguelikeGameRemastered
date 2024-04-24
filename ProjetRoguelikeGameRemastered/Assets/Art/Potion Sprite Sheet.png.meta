@@ -291,7 +291,7 @@ TextureImporter:
       213: -4007419938687194933
     second: Potion Sprite Sheet_31
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -308,12 +308,10 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -352,8 +350,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -365,7 +361,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -378,7 +373,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -391,33 +385,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1105,41 +1072,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Potion Sprite Sheet_0: 8458589295537231671
-      Potion Sprite Sheet_1: 1778381704056933229
-      Potion Sprite Sheet_10: 2979132716075551518
-      Potion Sprite Sheet_11: 7796820882123429056
-      Potion Sprite Sheet_12: 2833886296275682142
-      Potion Sprite Sheet_13: -3254141309432596428
-      Potion Sprite Sheet_14: 3725217435582083615
-      Potion Sprite Sheet_15: -2247426653357097317
-      Potion Sprite Sheet_16: 5506597268726566758
-      Potion Sprite Sheet_17: 5152033561576474125
-      Potion Sprite Sheet_18: 212774762579557454
-      Potion Sprite Sheet_19: -5694199194496933567
-      Potion Sprite Sheet_2: -85301699404245750
-      Potion Sprite Sheet_20: 1994300100584374656
-      Potion Sprite Sheet_21: 8877246503187532609
-      Potion Sprite Sheet_22: -5105541553122945915
-      Potion Sprite Sheet_23: -202807150389174144
-      Potion Sprite Sheet_24: -7072862060471011036
-      Potion Sprite Sheet_25: -8959260268282955068
-      Potion Sprite Sheet_26: 663567225824526324
-      Potion Sprite Sheet_27: -8319788176043933686
-      Potion Sprite Sheet_28: -5137781506912686825
-      Potion Sprite Sheet_29: 3178553836173431025
-      Potion Sprite Sheet_3: 2839950165313149521
-      Potion Sprite Sheet_30: -1933054314510470504
-      Potion Sprite Sheet_31: -4007419938687194933
-      Potion Sprite Sheet_4: 5524961348426455152
-      Potion Sprite Sheet_5: -956566714980134131
-      Potion Sprite Sheet_6: 9184658596719306851
-      Potion Sprite Sheet_7: 1573233558021120607
-      Potion Sprite Sheet_8: 1757620241168747
-      Potion Sprite Sheet_9: -5989236015706836450
-  mipmapLimitGroupName: 
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

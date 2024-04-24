@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifespan: 0.5
-  experience: 120
-  health: 0
   bobbingAnimation:
     frequency: 2
     direction: {x: 0, y: 0.3}
+  experience: 80
+  health: 0

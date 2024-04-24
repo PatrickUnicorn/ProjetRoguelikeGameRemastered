@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -13,7 +13,7 @@ namespace Terresquall {
 
         [Header("Debug")]
         public bool consolePrintAxis = false;
-        public Text UITextPrintAxis;
+        public TMPro.TMP_Text UITextPrintAxis;
 
         [Header("Settings")]
         public bool onlyOnMobile = true;

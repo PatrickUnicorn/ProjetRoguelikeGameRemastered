@@ -48,14 +48,12 @@ public class GameManager : MonoBehaviour
     float stopwatchTime; // The current time elapsed since the stopwatch started
     public TMP_Text stopwatchDisplay;
 
-    // Flag to check if the game is over
-    public bool isGameOver = false;
-
-    // Flag to check if the player is choosing their upgrades
-    public bool choosingUpgrade = false;
-
     // Reference to the player's game object
     public GameObject playerObject;
+
+    // Getters for parity with older scripts.
+    public bool isGameOver { get { return currentState == GameState.Paused; } }
+    public bool choosingUpgrade { get { return currentState == GameState.LevelUp; } }
 
     void Awake()
     {
@@ -79,32 +77,13 @@ public class GameManager : MonoBehaviour
         switch (currentState)
         {
             case GameState.Gameplay:
+            case GameState.Paused:
                 // Code for the gameplay state
                 CheckForPauseAndResume();
                 UpdateStopwatch();
                 break;
-            case GameState.Paused:
-                // Code for the paused state
-                CheckForPauseAndResume();
-                break;
             case GameState.GameOver:
-                // Code for the game over state
-                if (!isGameOver)
-                {
-                    isGameOver = true;
-                    Time.timeScale = 0f; //Stop the game entirely
-                    Debug.Log("Game is over");
-                    DisplayResults();
-                }
-                break;
             case GameState.LevelUp:
-                if (!choosingUpgrade)
-                {
-                    choosingUpgrade = true;
-                    Time.timeScale = 0f; //Pause the game for now
-                    Debug.Log("Upgrades shown");
-                    levelUpScreen.SetActive(true);
-                }
                 break;
             default:
                 Debug.LogWarning("STATE DOES NOT EXIST");
@@ -176,6 +155,7 @@ public class GameManager : MonoBehaviour
     // Define the method to change the state of the game
     public void ChangeState(GameState newState)
     {
+        previousState = currentState;
         currentState = newState;
     }
 
@@ -183,11 +163,9 @@ public class GameManager : MonoBehaviour
     {
         if (currentState != GameState.Paused)
         {
-            previousState = currentState;
             ChangeState(GameState.Paused);
             Time.timeScale = 0f; // Stop the game
             pauseScreen.SetActive(true); // Enable the pause screen
-            Debug.Log("Game is paused");
         }
     }
 
@@ -198,7 +176,6 @@ public class GameManager : MonoBehaviour
             ChangeState(previousState);
             Time.timeScale = 1f; // Resume the game
             pauseScreen.SetActive(false); //Disable the pause screen
-            Debug.Log("Game is resumed");
         }
     }
 
@@ -228,7 +205,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         timeSurvivedDisplay.text = stopwatchDisplay.text;
+
+        // Set the Game Over variables here.
         ChangeState(GameState.GameOver);
+        Time.timeScale = 0f; //Stop the game entirely
+        DisplayResults();
     }
 
     void DisplayResults()
@@ -247,49 +228,49 @@ public class GameManager : MonoBehaviour
         levelReachedDisplay.text = levelReachedData.ToString();
     }
 
-    public void AssignChosenWeaponsAndPassiveItemsUI(List<PlayerInventory.Slot> chosenWeaponsData, List<PlayerInventory.Slot> chosenPassiveItemsData)
-    {
-        // Check that both lists have the same length
-        if (chosenWeaponsData.Count != chosenWeaponsUI.Count || chosenPassiveItemsData.Count != chosenPassiveItemsUI.Count)
-        {
-            Debug.LogError("Chosen weapons and passive items data lists have different lengths");
-            return;
-        }
+    //public void AssignChosenWeaponsAndPassiveItemsUI(List<PlayerInventory.Slot> chosenWeaponsData, List<PlayerInventory.Slot> chosenPassiveItemsData)
+    //{
+    //    // Check that both lists have the same length
+    //    if (chosenWeaponsData.Count != chosenWeaponsUI.Count || chosenPassiveItemsData.Count != chosenPassiveItemsUI.Count)
+    //    {
+    //        Debug.LogError("Chosen weapons and passive items data lists have different lengths");
+    //        return;
+    //    }
 
-        // Assign chosen weapons data to chosenWeaponsUI
-        for (int i = 0; i < chosenWeaponsUI.Count; i++)
-        {
-            // Check that the sprite of the corresponding element in chosenWeaponsData is not null
-            if (chosenWeaponsData[i].image.sprite)
-            {
-                // Enable the corresponding element in chosenWeaponsUI and set its sprite to the corresponding sprite in chosenWeaponsData
-                chosenWeaponsUI[i].enabled = true;
-                chosenWeaponsUI[i].sprite = chosenWeaponsData[i].image.sprite;
-            }
-            else
-            {
-                // If the sprite is null, disable the corresponding element in chosenWeaponsUI
-                chosenWeaponsUI[i].enabled = false;
-            }
-        }
+    //    // Assign chosen weapons data to chosenWeaponsUI
+    //    for (int i = 0; i < chosenWeaponsUI.Count; i++)
+    //    {
+    //        // Check that the sprite of the corresponding element in chosenWeaponsData is not null
+    //        if (chosenWeaponsData[i].image.sprite)
+    //        {
+    //            // Enable the corresponding element in chosenWeaponsUI and set its sprite to the corresponding sprite in chosenWeaponsData
+    //            //chosenWeaponsUI[i].enabled = true;
+    //            chosenWeaponsUI[i].sprite = chosenWeaponsData[i].image.sprite;
+    //        }
+    //        else
+    //        {
+    //            // If the sprite is null, disable the corresponding element in chosenWeaponsUI
+    //            //chosenWeaponsUI[i].enabled = false;
+    //        }
+    //    }
 
-        // Assign chosen passive items data to chosenPassiveItemsUI
-        for (int i = 0; i < chosenPassiveItemsUI.Count; i++)
-        {
-            // Check that the sprite of the corresponding element in chosenPassiveItemsData is not null
-            if (chosenPassiveItemsData[i].image.sprite)
-            {
-                // Enable the corresponding element in chosenPassiveItemsUI and set its sprite to the corresponding sprite in chosenPassiveItemsData
-                chosenPassiveItemsUI[i].enabled = true;
-                chosenPassiveItemsUI[i].sprite = chosenPassiveItemsData[i].image.sprite;
-            }
-            else
-            {
-                // If the sprite is null, disable the corresponding element in chosenPassiveItemsUI
-                chosenPassiveItemsUI[i].enabled = false;
-            }
-        }
-    }
+    //    // Assign chosen passive items data to chosenPassiveItemsUI
+    //    for (int i = 0; i < chosenPassiveItemsUI.Count; i++)
+    //    {
+    //        // Check that the sprite of the corresponding element in chosenPassiveItemsData is not null
+    //        if (chosenPassiveItemsData[i].image.sprite)
+    //        {
+    //            // Enable the corresponding element in chosenPassiveItemsUI and set its sprite to the corresponding sprite in chosenPassiveItemsData
+    //            chosenPassiveItemsUI[i].enabled = true;
+    //            chosenPassiveItemsUI[i].sprite = chosenPassiveItemsData[i].image.sprite;
+    //        }
+    //        else
+    //        {
+    //            // If the sprite is null, disable the corresponding element in chosenPassiveItemsUI
+    //            chosenPassiveItemsUI[i].enabled = false;
+    //        }
+    //    }
+    //}
 
     void UpdateStopwatch()
     {
@@ -316,12 +297,13 @@ public class GameManager : MonoBehaviour
     public void StartLevelUp()
     {
         ChangeState(GameState.LevelUp);
+        levelUpScreen.SetActive(true);
+        Time.timeScale = 0f; //Pause the game for now
         playerObject.SendMessage("RemoveAndApplyUpgrades");
     }
 
     public void EndLevelUp()
     {
-        choosingUpgrade = false;
         Time.timeScale = 1f;    //Resume the game
         levelUpScreen.SetActive(false);
         ChangeState(GameState.Gameplay);

@@ -17,8 +17,8 @@ MonoBehaviour:
   evolutionData: []
   behaviour: LightningRingWeapon
   baseStats:
-    name: Lightning Ring
-    description: Strikes at random enemies.
+    name: Anneau de foudre
+    description: Frappe des ennemis au hasard.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 7516759946598892371, guid: 36874e7834133f64ca20d8fa7fd7a9b6, type: 3}
@@ -41,7 +41,7 @@ MonoBehaviour:
     maxInstances: 0
   linearGrowth:
   - name: Level 2
-    description: Fires one more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -63,7 +63,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 3
-    description: Base area up by 100%. Base damage up by 10.
+    description: "Zone de base augment\xE9e de 100%. D\xE9g\xE2ts de base augment\xE9s
+      de 10."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -85,7 +86,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 4
-    description: Fires one more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -107,7 +108,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 5
-    description: Base area up by 100%. Base damage up by 10.
+    description: "Zone de base augment\xE9e de 100%. D\xE9g\xE2ts de base augment\xE9s
+      de 10."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -129,7 +131,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 6
-    description: Fires one more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -151,7 +153,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 7
-    description: Base area up by 100%. Base damage up by 10.
+    description: "Zone de base augment\xE9e de 100%. D\xE9g\xE2ts de base augment\xE9s
+      de 10."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -173,7 +176,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 8
-    description: Fires one more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

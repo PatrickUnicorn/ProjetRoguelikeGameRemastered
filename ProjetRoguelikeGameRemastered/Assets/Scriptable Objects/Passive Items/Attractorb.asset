@@ -27,7 +27,7 @@ MonoBehaviour:
       level: 1
   baseStats:
     name: Attractorb
-    description: Increases attraction radius.
+    description: Augmente le rayon d'attraction.
     boosts:
       maxHealth: 0
       recovery: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
       revival: 0
   growth:
   - name: Level 2
-    description: Increases attraction radius.
+    description: Augmente le rayon d'attraction.
     boosts:
       maxHealth: 0
       recovery: 0.2
@@ -66,7 +66,7 @@ MonoBehaviour:
       magnet: 0.2
       revival: 0
   - name: Level 3
-    description: Increases attraction radius.
+    description: Augmente le rayon d'attraction.
     boosts:
       maxHealth: 0
       recovery: 0.2
@@ -85,7 +85,7 @@ MonoBehaviour:
       magnet: 0.2
       revival: 0
   - name: Level 4
-    description: Increases attraction radius.
+    description: Augmente le rayon d'attraction.
     boosts:
       maxHealth: 0
       recovery: 0.2
@@ -104,7 +104,7 @@ MonoBehaviour:
       magnet: 0.2
       revival: 0
   - name: Level 5
-    description: Increases attraction radius.
+    description: Augmente le rayon d'attraction.
     boosts:
       maxHealth: 0
       recovery: 0.2

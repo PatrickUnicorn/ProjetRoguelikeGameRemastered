@@ -276,7 +276,7 @@ TextureImporter:
       213: 8052441202235915838
     second: Weapon Sprite Sheet_90
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -293,12 +293,10 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -337,8 +335,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -350,7 +346,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -363,7 +358,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -376,33 +370,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2329,100 +2296,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Weapon Sprite Sheet_0: 9207735581965711734
-      Weapon Sprite Sheet_1: -4775078302234968536
-      Weapon Sprite Sheet_10: -8918777406050621082
-      Weapon Sprite Sheet_11: 5549041932812563717
-      Weapon Sprite Sheet_12: -3847403924635128467
-      Weapon Sprite Sheet_13: 3610036674047829966
-      Weapon Sprite Sheet_14: 8161120286630919904
-      Weapon Sprite Sheet_15: 7546991876712855503
-      Weapon Sprite Sheet_16: 1572848790057153458
-      Weapon Sprite Sheet_17: 194581361588180964
-      Weapon Sprite Sheet_18: -5129018611259825643
-      Weapon Sprite Sheet_19: -3731263825877814619
-      Weapon Sprite Sheet_2: -1848890203516335578
-      Weapon Sprite Sheet_20: -1815272878763697944
-      Weapon Sprite Sheet_21: 4901994437673696230
-      Weapon Sprite Sheet_22: -7003085622725692751
-      Weapon Sprite Sheet_23: -7617437685643048212
-      Weapon Sprite Sheet_24: -599183092998106742
-      Weapon Sprite Sheet_25: 9083995368027599888
-      Weapon Sprite Sheet_26: 336283729732301074
-      Weapon Sprite Sheet_27: 5693830703642767778
-      Weapon Sprite Sheet_28: -1421585791615698538
-      Weapon Sprite Sheet_29: 427547421829704613
-      Weapon Sprite Sheet_3: -1175853727629983997
-      Weapon Sprite Sheet_30: 8581933888162349049
-      Weapon Sprite Sheet_31: -176204487536788385
-      Weapon Sprite Sheet_32: -1539811036266398324
-      Weapon Sprite Sheet_33: 1899642935618872360
-      Weapon Sprite Sheet_34: -2943649710136103269
-      Weapon Sprite Sheet_35: 8872318744520564111
-      Weapon Sprite Sheet_36: 878739576302812805
-      Weapon Sprite Sheet_37: 6181521966465165694
-      Weapon Sprite Sheet_38: 4802441320184592479
-      Weapon Sprite Sheet_39: 2244864369642338951
-      Weapon Sprite Sheet_4: -7498362860620262534
-      Weapon Sprite Sheet_40: 1530812493397116556
-      Weapon Sprite Sheet_41: 1370455534325403661
-      Weapon Sprite Sheet_42: 7119724085288062119
-      Weapon Sprite Sheet_43: -4593623621732002758
-      Weapon Sprite Sheet_44: -1759149211228787372
-      Weapon Sprite Sheet_45: -2864408511424873090
-      Weapon Sprite Sheet_46: -2003100532787921818
-      Weapon Sprite Sheet_47: -9088806875058118236
-      Weapon Sprite Sheet_48: -8057411646615973048
-      Weapon Sprite Sheet_49: -956682225960099608
-      Weapon Sprite Sheet_5: 1080717351382735312
-      Weapon Sprite Sheet_50: -4917033825382705640
-      Weapon Sprite Sheet_51: -855830634297284965
-      Weapon Sprite Sheet_52: -3725457172913187334
-      Weapon Sprite Sheet_53: 728377656195595939
-      Weapon Sprite Sheet_54: -5716906604920101396
-      Weapon Sprite Sheet_55: 2322474491237613556
-      Weapon Sprite Sheet_56: -3540552821549603012
-      Weapon Sprite Sheet_57: -4348386029691677796
-      Weapon Sprite Sheet_58: -516429010289857634
-      Weapon Sprite Sheet_59: -7422964290579944171
-      Weapon Sprite Sheet_6: 8388320878490711942
-      Weapon Sprite Sheet_60: -6363787338021168233
-      Weapon Sprite Sheet_61: -5235626579636041202
-      Weapon Sprite Sheet_62: 6319603199432094965
-      Weapon Sprite Sheet_63: -820182955282706770
-      Weapon Sprite Sheet_64: -4077394984683094584
-      Weapon Sprite Sheet_65: 5134571009643480723
-      Weapon Sprite Sheet_66: 1271908111824941891
-      Weapon Sprite Sheet_67: 5951490057397457947
-      Weapon Sprite Sheet_68: 5843937330171621779
-      Weapon Sprite Sheet_69: -4995223928855330776
-      Weapon Sprite Sheet_7: 5818799726487204595
-      Weapon Sprite Sheet_70: 3408436188004685774
-      Weapon Sprite Sheet_71: -6764099212210490775
-      Weapon Sprite Sheet_72: -6252370469521232246
-      Weapon Sprite Sheet_73: -1380494666459213703
-      Weapon Sprite Sheet_74: 6125617133994977556
-      Weapon Sprite Sheet_75: -1589171423629199955
-      Weapon Sprite Sheet_76: -9006249375422868598
-      Weapon Sprite Sheet_77: -945230036122694369
-      Weapon Sprite Sheet_78: 5722138023932662497
-      Weapon Sprite Sheet_79: -3119161078960804022
-      Weapon Sprite Sheet_8: -2938255571408682076
-      Weapon Sprite Sheet_80: 5666179410444971132
-      Weapon Sprite Sheet_81: -4246850767289697100
-      Weapon Sprite Sheet_82: 6389604641927212888
-      Weapon Sprite Sheet_83: 7517485798860983342
-      Weapon Sprite Sheet_84: -2981893585169800449
-      Weapon Sprite Sheet_85: 2208774748180456388
-      Weapon Sprite Sheet_86: -2439444223128732376
-      Weapon Sprite Sheet_87: 4121995917066828205
-      Weapon Sprite Sheet_88: -9186335331826089930
-      Weapon Sprite Sheet_89: -5836066604061371169
-      Weapon Sprite Sheet_9: -6797886676057144242
-      Weapon Sprite Sheet_90: 8052441202235915838
-  mipmapLimitGroupName: 
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

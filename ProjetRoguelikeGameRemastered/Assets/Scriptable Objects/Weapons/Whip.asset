@@ -17,8 +17,8 @@ MonoBehaviour:
   evolutionData: []
   behaviour: WhipWeapon
   baseStats:
-    name: Whip
-    description: Attacks horizontally, passes through enemies.
+    name: Fouet
+    description: Attaque horizontalement, traverse les ennemis.
     projectilePrefab: {fileID: 6030035319384525284, guid: bec0c998b97a437448c25c44aede0e5b, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
     maxInstances: 99
   linearGrowth:
   - name: Level 2
-    description: Fires 1 more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -63,7 +63,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 3
-    description: Base Damage up by 5.
+    description: "D\xE9g\xE2ts de base augment\xE9s de 5."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -85,7 +85,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 4
-    description: Base Area up by 10%. Base Damage up by 5.
+    description: "Zone de base augment\xE9e de 10%. D\xE9g\xE2ts de base augment\xE9s
+      de 5."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -107,7 +108,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 5
-    description: Base Damage up by 5.
+    description: "D\xE9g\xE2ts de base augment\xE9s de 5."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -129,7 +130,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 6
-    description: Base Area up by 10%. Base Damage up by 5.
+    description: "Zone de base augment\xE9e de 10%. D\xE9g\xE2ts de base augment\xE9s
+      de 5."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -151,7 +153,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 7
-    description: Base Damage up by 5.
+    description: "D\xE9g\xE2ts de base augment\xE9s de 5."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -173,7 +175,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 8
-    description: Base Area up by 10%. Base Damage up by 5.
+    description: "Zone de base augment\xE9e de 10%. D\xE9g\xE2ts de base augment\xE9s
+      de 5."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

@@ -27,8 +27,9 @@ MonoBehaviour:
       level: 1
   behaviour: AuraWeapon
   baseStats:
-    name: Garlic
-    description: Damages nearby enemies. Reduces resistance to knockback and freeze.
+    name: Ail
+    description: "Fait des d\xE9gats aux ennemis proches. R\xE9duit la r\xE9sistance
+      au recul et au gel."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 4169919635133386887, guid: ac71b6e1c02b03c40bf86e3298f3dc37, type: 3}
     hitEffect: {fileID: 0}
@@ -51,7 +52,8 @@ MonoBehaviour:
     maxInstances: 50
   linearGrowth:
   - name: Level 2
-    description: Base Area up by 40%. Base Damage up by 2.
+    description: "Zone de base augment\xE9e de 40%. D\xE9g\xE2ts de base augment\xE9s
+      de 2."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -73,7 +75,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 3
-    description: Cooldown reduced by 0.1 seconds. Base Damage up by 1.
+    description: "Temps de recharge r\xE9duit de 0,1 seconde. D\xE9g\xE2ts de base
+      augment\xE9s de 1."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -95,7 +98,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 4
-    description: Base Area up by 20%. Base Damage up by 1.
+    description: "Zone de base augment\xE9e de 20%. D\xE9g\xE2ts de base augment\xE9s
+      de 1."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -117,7 +121,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 5
-    description: Cooldown reduced by 0.1 seconds. Base Damage up by 2.
+    description: "Temps de recharge r\xE9duit de 0,1 seconde. D\xE9g\xE2ts de base
+      augment\xE9s de 2."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -139,7 +144,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 6
-    description: Base Area up by 20%. Base Damage up by 1.
+    description: "Zone de base augment\xE9e de 20%. D\xE9g\xE2ts de base augment\xE9s
+      de 1."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -161,7 +167,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 7
-    description: Cooldown reduced by 0.1 seconds. Base Damage up by 1.
+    description: "Temps de recharge r\xE9duit de 0,1 seconde. D\xE9g\xE2ts de base
+      augment\xE9s de 1."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -183,7 +190,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 8
-    description: Base Area up by 20%. Base Damage up by 1.
+    description: "Zone de base augment\xE9e de 20%. D\xE9g\xE2ts de base augment\xE9s
+      de 1."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

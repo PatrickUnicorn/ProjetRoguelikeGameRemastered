@@ -16,8 +16,9 @@ MonoBehaviour:
   maxLevel: 5
   evolutionData: []
   baseStats:
-    name: Armor
-    description: Reduces incoming damage by 1. Increases retaliatory damage by 10%.
+    name: Armure
+    description: "R\xE9duit les d\xE9g\xE2ts entrants de 1. Augmente les d\xE9g\xE2ts
+      de riposte de 10%."
     boosts:
       maxHealth: 0
       recovery: 0
@@ -37,7 +38,8 @@ MonoBehaviour:
       revival: 0
   growth:
   - name: Level 2
-    description: Reduces incoming damage by 1. Increases retaliatory damage by 10%.
+    description: "R\xE9duit les d\xE9g\xE2ts entrants de 1. Augmente les d\xE9g\xE2ts
+      de riposte de 10%."
     boosts:
       maxHealth: 0
       recovery: 0
@@ -56,7 +58,8 @@ MonoBehaviour:
       magnet: 0
       revival: 0
   - name: Level 3
-    description: Reduces incoming damage by 1. Increases retaliatory damage by 10%.
+    description: "R\xE9duit les d\xE9g\xE2ts entrants de 1. Augmente les d\xE9g\xE2ts
+      de riposte de 10%."
     boosts:
       maxHealth: 0
       recovery: 0
@@ -75,7 +78,8 @@ MonoBehaviour:
       magnet: 0
       revival: 0
   - name: Level 4
-    description: Reduces incoming damage by 1. Increases retaliatory damage by 10%.
+    description: "R\xE9duit les d\xE9g\xE2ts entrants de 1. Augmente les d\xE9g\xE2ts
+      de riposte de 10%."
     boosts:
       maxHealth: 0
       recovery: 0
@@ -94,7 +98,8 @@ MonoBehaviour:
       magnet: 0
       revival: 0
   - name: Level 5
-    description: Reduces incoming damage by 1. Increases retaliatory damage by 10%.
+    description: "R\xE9duit les d\xE9g\xE2ts entrants de 1. Augmente les d\xE9g\xE2ts
+      de riposte de 10%."
     boosts:
       maxHealth: 0
       recovery: 0

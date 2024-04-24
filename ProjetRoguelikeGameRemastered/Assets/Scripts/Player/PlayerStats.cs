@@ -44,16 +44,15 @@ public class PlayerStats : MonoBehaviour
     #endregion
 
     [Header("Visuals")]
-    public ParticleSystem damageEffect; // If damage is dealt.
-    public ParticleSystem blockedEffect; // If armor completely blocks damage.
+    public ParticleSystem damageEffect; 
+    public ParticleSystem blockedEffect; 
 
-    //Experience and level of the player
     [Header("Experience/Level")]
     public int experience = 0;
     public int level = 1;
     public int experienceCap;
 
-    //Class for defining a level range and the corresponding experience cap increase for that range
+
     [System.Serializable]
     public class LevelRange
     {
@@ -62,7 +61,7 @@ public class PlayerStats : MonoBehaviour
         public int experienceCapIncrease;
     }
 
-    //I-Frames
+
     [Header("I-Frames")]
     public float invincibilityDuration;
     float invincibilityTimer;
@@ -90,7 +89,6 @@ public class PlayerStats : MonoBehaviour
         inventory = GetComponent<PlayerInventory>();
         collector = GetComponentInChildren<PlayerCollector>();
 
-        //Assign the variables
         baseStats = actualStats = characterData.stats;
         collector.SetRadius(actualStats.magnet);
         health = actualStats.maxHealth;
@@ -98,10 +96,8 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        //Spawn the starting weapon
         inventory.Add(characterData.StartingWeapon);
 
-        //Initialize the experience cap as the first experience cap increase
         experienceCap = levelRanges[0].experienceCapIncrease;
 
         GameManager.instance.AssignChosenCharacterUI(characterData);
@@ -117,7 +113,6 @@ public class PlayerStats : MonoBehaviour
         {
             invincibilityTimer -= Time.deltaTime;
         }
-        //If the invincibility timer has reached 0, set the invincibility flag to false
         else if (isInvincible)
         {
             isInvincible = false;
@@ -138,7 +133,6 @@ public class PlayerStats : MonoBehaviour
             }
         }
 
-        // Update the PlayerCollector's radius.
         collector.SetRadius(actualStats.magnet);
     }
 
@@ -154,11 +148,10 @@ public class PlayerStats : MonoBehaviour
     {
         if (experience >= experienceCap)
         {
-            //Level up the player and reduce their experience by the experience cap
             level++;
             experience -= experienceCap;
 
-            //Find the experience cap increase for the current level range
+
             int experienceCapIncrease = 0;
             foreach (LevelRange range in levelRanges)
             {
@@ -178,30 +171,28 @@ public class PlayerStats : MonoBehaviour
 
     void UpdateExpBar()
     {
-        // Update exp bar fill amount
+
         expBar.fillAmount = (float)experience / experienceCap;
     }
 
     void UpdateLevelText()
     {
-        // Update level text
+
         levelText.text = "LV " + level.ToString();
     }
 
     public void TakeDamage(float dmg)
     {
-        //If the player is not currently invincible, reduce health and start invincibility
+
         if (!isInvincible)
         {
-            // Take armor into account before dealing the damage.
+
             dmg -= actualStats.armor;
 
             if (dmg > 0)
             {
-                // Deal the damage.
                 CurrentHealth -= dmg;
 
-                // If there is a damage effect assigned, play it.
                 if (damageEffect) Destroy(Instantiate(damageEffect, transform.position, Quaternion.identity), 5f);
 
                 if (CurrentHealth <= 0)
@@ -211,7 +202,7 @@ public class PlayerStats : MonoBehaviour
             }
             else
             {
-                // If there is a blocked effect assigned, play it.
+
                 if (blockedEffect) Destroy(Instantiate(blockedEffect, transform.position, Quaternion.identity), 5f);
             }
 
@@ -222,7 +213,6 @@ public class PlayerStats : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        //Update the health bar
         healthBar.fillAmount = CurrentHealth / actualStats.maxHealth;
     }
 
@@ -231,19 +221,16 @@ public class PlayerStats : MonoBehaviour
         if (!GameManager.instance.isGameOver)
         {
             GameManager.instance.AssignLevelReachedUI(level);
-            GameManager.instance.AssignChosenWeaponsAndPassiveItemsUI(inventory.weaponSlots, inventory.passiveSlots);
             GameManager.instance.GameOver();
         }
     }
 
     public void RestoreHealth(float amount)
     {
-        // Only heal the player if their current health is less than their maximum health
         if (CurrentHealth < actualStats.maxHealth)
         {
             CurrentHealth += amount;
 
-            // Make sure the player's health doesn't exceed their maximum health
             if (CurrentHealth > actualStats.maxHealth)
             {
                 CurrentHealth = actualStats.maxHealth;
@@ -257,7 +244,6 @@ public class PlayerStats : MonoBehaviour
         {
             CurrentHealth += Stats.recovery * Time.deltaTime;
 
-            // Make sure the player's health doesn't exceed their maximum health
             if (CurrentHealth > actualStats.maxHealth)
             {
                 CurrentHealth = actualStats.maxHealth;

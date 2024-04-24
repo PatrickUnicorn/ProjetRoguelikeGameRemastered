@@ -26,8 +26,8 @@ MonoBehaviour:
       itemType: {fileID: 11400000, guid: 764ecc47696366f44b3cc048fd7f6563, type: 2}
       level: 1
   baseStats:
-    name: Empty Tome
-    description: Reduces cooldown of all weapons by 8%.
+    name: Tome vide
+    description: "R\xE9duit le temps de recharge de toutes les armes de 8%."
     boosts:
       maxHealth: 0
       recovery: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
       revival: 0
   growth:
   - name: Level 2
-    description: Reduces cooldown of all weapons by 8%.
+    description: "R\xE9duit le temps de recharge de toutes les armes de 8%."
     boosts:
       maxHealth: 0
       recovery: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
       magnet: 0
       revival: 0
   - name: Level 3
-    description: Reduces cooldown of all weapons by 8%.
+    description: "R\xE9duit le temps de recharge de toutes les armes de 8%."
     boosts:
       maxHealth: 0
       recovery: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
       magnet: 0
       revival: 0
   - name: Level 4
-    description: Reduces cooldown of all weapons by 8%.
+    description: "R\xE9duit le temps de recharge de toutes les armes de 8%."
     boosts:
       maxHealth: 0
       recovery: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
       magnet: 0
       revival: 0
   - name: Level 5
-    description: Reduces cooldown of all weapons by 8%.
+    description: "R\xE9duit le temps de recharge de toutes les armes de 8%."
     boosts:
       maxHealth: 0
       recovery: 0

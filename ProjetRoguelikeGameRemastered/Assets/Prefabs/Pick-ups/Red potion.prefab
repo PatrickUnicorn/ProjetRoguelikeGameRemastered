@@ -149,4 +149,4 @@ MonoBehaviour:
     frequency: 2
     direction: {x: 0, y: 0.3}
   experience: 0
-  health: 50
+  health: 25

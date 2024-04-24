@@ -18,7 +18,8 @@ MonoBehaviour:
   behaviour: AuraWeapon
   baseStats:
     name: Soul Eater
-    description: Damages nearby enemies. Reduces resistance to knockback and freeze.
+    description: "fait des d\xE9gats aux ennemis proches. R\xE9duit la r\xE9sistance
+      au recul et au gel."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 6737893553449691846, guid: bc121cf1a26a83b4b8400ba44134318e, type: 3}
     hitEffect: {fileID: 0}

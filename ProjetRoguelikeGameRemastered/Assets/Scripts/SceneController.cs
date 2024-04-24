@@ -11,6 +11,6 @@ public class SceneController : MonoBehaviour
     public void ApplicationQuit()
     {
         Application.Quit();
-        Debug.Log("quitting");
+        Debug.Log("Fermeture");
     }
 }

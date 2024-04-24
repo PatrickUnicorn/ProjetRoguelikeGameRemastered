@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d531c6a981a4bbf4a9fbbeb73cb20eca, type: 3}
   m_Name: Pummarola
   m_EditorClassIdentifier: 
-  icon: {fileID: 2077197696238714143, guid: dc34663087032654d9b52a93acd4ae25, type: 3}
+  icon: {fileID: 585622740456205156, guid: dc34663087032654d9b52a93acd4ae25, type: 3}
   maxLevel: 5
   evolutionData:
   - name: Soul Eater
@@ -27,48 +27,98 @@ MonoBehaviour:
       level: 1
   baseStats:
     name: Pummarola
-    description: Character recovers 0.2 HP per second.
+    description: "Le personnage r\xE9cup\xE8re 0,2 PV par seconde."
     boosts:
       maxHealth: 0
       recovery: 0.2
+      armor: 0
       moveSpeed: 0
       might: 0
+      area: 0
       speed: 0
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
       magnet: 0
+      revival: 0
   growth:
   - name: Level 2
-    description: Health recovery increases by 0.2 HP per second.
+    description: "Le personnage r\xE9cup\xE8re 0,2 PV par seconde."
     boosts:
       maxHealth: 0
       recovery: 0.2
+      armor: 0
       moveSpeed: 0
       might: 0
+      area: 0
       speed: 0
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
       magnet: 0
+      revival: 0
   - name: Level 3
-    description: Health recovery increases by 0.2 HP per second.
+    description: "Le personnage r\xE9cup\xE8re 0,2 PV par seconde."
     boosts:
       maxHealth: 0
       recovery: 0.2
+      armor: 0
       moveSpeed: 0
       might: 0
+      area: 0
       speed: 0
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
       magnet: 0
+      revival: 0
   - name: Level 4
-    description: Health recovery increases by 0.2 HP per second.
+    description: "Le personnage r\xE9cup\xE8re 0,2 PV par seconde."
     boosts:
       maxHealth: 0
       recovery: 0.2
+      armor: 0
       moveSpeed: 0
       might: 0
+      area: 0
       speed: 0
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
       magnet: 0
+      revival: 0
   - name: Level 5
-    description: Health recovery increases by 0.2 HP per second.
+    description: "Le personnage r\xE9cup\xE8re 0,2 PV par seconde."
     boosts:
       maxHealth: 0
       recovery: 0.2
+      armor: 0
       moveSpeed: 0
       might: 0
+      area: 0
       speed: 0
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
       magnet: 0
+      revival: 0

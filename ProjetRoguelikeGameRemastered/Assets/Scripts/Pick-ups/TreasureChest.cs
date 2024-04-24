@@ -21,6 +21,7 @@ public class TreasureChest : MonoBehaviour
     public void OpenTreasureChest(PlayerInventory inventory, bool isHigherTier)
     {
 
+
         foreach (PlayerInventory.Slot s in inventory.weaponSlots)
         {
 
@@ -29,6 +30,7 @@ public class TreasureChest : MonoBehaviour
 
             foreach (ItemData.Evolution e in w.data.evolutionData)
             {
+
                 if (e.condition == ItemData.Evolution.Condition.treasureChest)
                 {
                     bool attempt = w.AttemptEvolution(e, 0);
@@ -38,4 +40,5 @@ public class TreasureChest : MonoBehaviour
             }
         }
     }
+
 }

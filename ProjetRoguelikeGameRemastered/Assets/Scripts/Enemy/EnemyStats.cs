@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -12,7 +11,6 @@ public class EnemyStats : MonoBehaviour
     public float currentHealth;
     public float currentDamage;
 
-    public float despawnDistance = 20f;
     Transform player;
 
     [Header("Damage Feedback")]
@@ -23,8 +21,12 @@ public class EnemyStats : MonoBehaviour
     SpriteRenderer sr;
     EnemyMovement movement;
 
+    public static int count; // Track the number of enemies on the screen.
+
     void Awake()
     {
+        count++;
+
         //Assign the vaiables
         currentMoveSpeed = enemyData.MoveSpeed;
         currentHealth = enemyData.MaxHealth;
@@ -42,10 +44,10 @@ public class EnemyStats : MonoBehaviour
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) >= despawnDistance)
-        {
-            ReturnEnemy();
-        }
+        //if (!sr.isVisible)
+        //{
+        //    ReturnEnemy();
+        //}
     }
 
     // This function always needs at least 2 values, the amount of damage dealt <dmg>, as well as where the damage is
@@ -120,13 +122,11 @@ public class EnemyStats : MonoBehaviour
 
     private void OnDestroy()
     {
-        EnemySpawner es = FindObjectOfType<EnemySpawner>();
-        if(es) es.OnEnemyKilled();
+        count--;
     }
 
     void ReturnEnemy()
     {
-        EnemySpawner es = FindObjectOfType<EnemySpawner>();
-        transform.position = player.position + es.relativeSpawnPoints[Random.Range(0, es.relativeSpawnPoints.Count)].position;
+        transform.position = SpawnManager.GeneratePosition();
     }
 }

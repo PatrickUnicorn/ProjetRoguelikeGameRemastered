@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Knife
   m_EditorClassIdentifier: 
   icon: {fileID: -1815272878763697944, guid: 9a4fc81d095024a48880d86a3c54f2b7, type: 3}
-  maxLevel: 2
+  maxLevel: 8
   evolutionData: []
   behaviour: ProjectileWeapon
   baseStats:
-    name: Knife
-    description: Fires quickly in a certain direction.
+    name: Couteau
+    description: "Tire rapidement dans une direction pr\xE9cise."
     projectilePrefab: {fileID: 8272151355606925140, guid: 6baa1f016461c0241b581b8ee9b0b964, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
     maxInstances: 70
   linearGrowth:
   - name: Level 2
-    description: Fires one more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -63,7 +63,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 3
-    description: Fires one more projectile. Base damage up by 5.
+    description: "Tire 1 projectile de plus.. D\xE9g\xE2ts de base augment\xE9s de
+      5."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -85,7 +86,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 4
-    description: Fires one more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -107,7 +108,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 5
-    description: Passes through one more enemy.
+    description: Traverse un ennemi de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -129,7 +130,7 @@ MonoBehaviour:
     piercing: 1
     maxInstances: 0
   - name: Level 6
-    description: Fires one more projectile.
+    description: Tire 1 projectile de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -144,14 +145,14 @@ MonoBehaviour:
     damageVariance: 0
     area: 0
     speed: 0
-    cooldown: 0
+    cooldown: -1.96
     projectileInterval: 0
     knockback: 0
     number: 1
     piercing: 0
     maxInstances: 0
   - name: Level 7
-    description: Passes through one more enemy.
+    description: Traverse un ennemi de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -173,7 +174,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: Level 8
-    description: Passes through one more enemy.
+    description: Traverse un ennemi de plus.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

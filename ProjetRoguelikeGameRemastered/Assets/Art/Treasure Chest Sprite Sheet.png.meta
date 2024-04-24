@@ -93,7 +93,7 @@ TextureImporter:
       213: -5748803957083769374
     second: Treasure Chest Sprite Sheet_29
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -110,12 +110,10 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -154,8 +152,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -167,7 +163,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -180,7 +175,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -193,7 +187,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -206,20 +199,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -865,39 +844,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Treasure Chest Sprite Sheet_0: 1628640775592932678
-      Treasure Chest Sprite Sheet_1: -660754008407350351
-      Treasure Chest Sprite Sheet_10: -3586518099895539465
-      Treasure Chest Sprite Sheet_11: -6159550326645532262
-      Treasure Chest Sprite Sheet_12: 2056321638572208386
-      Treasure Chest Sprite Sheet_13: 8164287225077282255
-      Treasure Chest Sprite Sheet_14: -7215387118638738061
-      Treasure Chest Sprite Sheet_15: -5626250885438718664
-      Treasure Chest Sprite Sheet_16: -553862337145656958
-      Treasure Chest Sprite Sheet_17: -5858582469525471255
-      Treasure Chest Sprite Sheet_18: 5272130881551233660
-      Treasure Chest Sprite Sheet_19: 5679056325187683755
-      Treasure Chest Sprite Sheet_2: -5774177518120018661
-      Treasure Chest Sprite Sheet_20: -4816297466876051637
-      Treasure Chest Sprite Sheet_21: -3167933610941708773
-      Treasure Chest Sprite Sheet_22: -3762741530308485797
-      Treasure Chest Sprite Sheet_23: 1379693856563354231
-      Treasure Chest Sprite Sheet_24: 1874750853412243854
-      Treasure Chest Sprite Sheet_25: -2649124133700593068
-      Treasure Chest Sprite Sheet_26: 1668107977821844889
-      Treasure Chest Sprite Sheet_27: 5020746871847129014
-      Treasure Chest Sprite Sheet_28: 3959491510570050774
-      Treasure Chest Sprite Sheet_29: -5748803957083769374
-      Treasure Chest Sprite Sheet_3: 9207656992336818565
-      Treasure Chest Sprite Sheet_4: 898456659070478400
-      Treasure Chest Sprite Sheet_5: 7054025723336144326
-      Treasure Chest Sprite Sheet_6: -3645028102312501234
-      Treasure Chest Sprite Sheet_7: 275234946948376282
-      Treasure Chest Sprite Sheet_8: 6222690216098878761
-      Treasure Chest Sprite Sheet_9: -4635721659356425882
-  mipmapLimitGroupName: 
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
