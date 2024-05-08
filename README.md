@@ -21,7 +21,7 @@ ProjetRoguelikeGameRemastered est un jeu de type roguelike où les joueurs doive
 ## Liste des Objets
 Voici une liste des objets que vous pouvez trouver dans ProjetRoguelikeGameRemastered, inspirés par Vampire Survivors :
 
-  Objets "actifs":
+Objets "actifs":
   
 - **Hache** : Dégâts élevés, grande échelle de zone.
 - **Baguette de feu** : Tire sur un ennemi au hasard, inflige de lourds dégâts.
@@ -31,7 +31,7 @@ Voici une liste des objets que vous pouvez trouver dans ProjetRoguelikeGameRemas
 - **Soul Eater** : fait des dégats aux ennemis proches. Réduit la résistance au recul et au gel. (ceci est l'unique évolution disponible d'arme) (disponible en combinant Ail lvl 8 et Pummarola lvl 5 )
 - **Fouet** : Attaque horizontalement, traverse les ennemis.
 
-  Objets "passifs":
+Objets "passifs":
   
 - **Ailes ** : Le personnage se déplace 10% plus vite.
 - **Armure** : Réduit les dégâts entrants de 1. Augmente les dégâts de riposte de 10%.
