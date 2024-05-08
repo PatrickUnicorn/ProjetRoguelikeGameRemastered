@@ -22,7 +22,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 Passive p = item as Passive;
             }
-            Debug.Log(string.Format("Assigned {0} to player.", item.name));
+            Debug.Log(string.Format("Attribué {0} (type d'arme) to player.", item.name));
         }
 
         public void Clear()
@@ -37,8 +37,8 @@ public class PlayerInventory : MonoBehaviour
     public UIInventoryIconsDisplay weaponUI, passiveUI;
 
     [Header("UI Elements")]
-    public List<WeaponData> availableWeapons = new List<WeaponData>();    //List of upgrade options for weapons
-    public List<PassiveData> availablePassives = new List<PassiveData>(); //List of upgrade options for passive items
+    public List<WeaponData> availableWeapons = new List<WeaponData>();  
+    public List<PassiveData> availablePassives = new List<PassiveData>(); 
     public UIUpgradeWindow upgradeWindow;
 
     PlayerStats player;
@@ -48,7 +48,6 @@ public class PlayerInventory : MonoBehaviour
         player = GetComponent<PlayerStats>();
     }
 
-    // Checks if the inventory has an item of a certain type.
     public bool Has(ItemData type) { return Get(type); }
 
     public Item Get(ItemData type)
@@ -58,7 +57,6 @@ public class PlayerInventory : MonoBehaviour
         return null;
     }
 
-    // Find a passive of a certain type in the inventory.
     public Passive Get(PassiveData type)
     {
         foreach (Slot s in passiveSlots)
@@ -70,7 +68,6 @@ public class PlayerInventory : MonoBehaviour
         return null;
     }
 
-    // Find a weapon of a certain type in the inventory.
     public Weapon Get(WeaponData type)
     {
         foreach (Slot s in weaponSlots)
@@ -82,10 +79,8 @@ public class PlayerInventory : MonoBehaviour
         return null;
     }
 
-    // Removes a weapon of a particular type, as specified by <data>.
     public bool Remove(WeaponData data, bool removeUpgradeAvailability = false)
     {
-        // Remove this weapon from the upgrade pool.
         if (removeUpgradeAvailability) availableWeapons.Remove(data);
 
         for(int i = 0; i < weaponSlots.Count; i++)
@@ -103,10 +98,8 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
-    // Removes a passive of a particular type, as specified by <data>.
     public bool Remove(PassiveData data, bool removeUpgradeAvailability = false)
     {
-        // Remove this passive from the upgrade pool.
         if (removeUpgradeAvailability) availablePassives.Remove(data);
 
         for (int i = 0; i < weaponSlots.Count; i++)
@@ -124,8 +117,6 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
-    // If an ItemData is passed, determine what type it is and call the respective overload.
-    // We also have an optional boolean to remove this item from the upgrade list.
     public bool Remove(ItemData data, bool removeUpgradeAvailability = false)
     {
         if (data is PassiveData) return Remove(data as PassiveData, removeUpgradeAvailability);
@@ -133,13 +124,10 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
-    // Finds an empty slot and adds a weapon of a certain type, returns
-    // the slot number that the item was put in.
     public int Add(WeaponData data)
     {
         int slotNum = -1;
 
-        // Try to find an empty slot.
         for(int i = 0; i < weaponSlots.Capacity; i++)
         {
             if (weaponSlots[i].IsEmpty())
@@ -149,28 +137,22 @@ public class PlayerInventory : MonoBehaviour
             }
         }
 
-        // If there is no empty slot, exit.
         if (slotNum < 0) return slotNum;
 
-        // Otherwise create the weapon in the slot.
-        // Get the type of the weapon we want to spawn.
         Type weaponType = Type.GetType(data.behaviour);
 
         if (weaponType != null)
         {
-            // Spawn the weapon GameObject.
             GameObject go = new GameObject(data.baseStats.name + " Controller");
             Weapon spawnedWeapon = (Weapon)go.AddComponent(weaponType);
-            spawnedWeapon.transform.SetParent(transform); //Set the weapon to be a child of the player
+            spawnedWeapon.transform.SetParent(transform);
             spawnedWeapon.transform.localPosition = Vector2.zero;
             spawnedWeapon.Initialise(data);
             spawnedWeapon.OnEquip();
 
-            // Assign the weapon to the slot.
             weaponSlots[slotNum].Assign(spawnedWeapon);
             weaponUI.Refresh();
 
-            // Close the level up UI if it is on.
             if (GameManager.instance != null && GameManager.instance.choosingUpgrade)
                 GameManager.instance.EndLevelUp();
 
@@ -179,7 +161,7 @@ public class PlayerInventory : MonoBehaviour
         else
         {
             Debug.LogWarning(string.Format(
-                "Invalid weapon type specified for {0}.",
+                "Type d'arme invalide spécifié pour {0}.",
                 data.name
             ));
         }
@@ -187,13 +169,10 @@ public class PlayerInventory : MonoBehaviour
         return -1;
     }
 
-    // Finds an empty slot and adds a passive of a certain type, returns
-    // the slot number that the item was put in.
     public int Add(PassiveData data)
     {
         int slotNum = -1;
 
-        // Try to find an empty slot.
         for (int i = 0; i < passiveSlots.Capacity; i++)
         {
             if (passiveSlots[i].IsEmpty())
@@ -203,18 +182,14 @@ public class PlayerInventory : MonoBehaviour
             }
         }
 
-        // If there is no empty slot, exit.
         if (slotNum < 0) return slotNum;
 
-        // Otherwise create the passive in the slot.
-        // Get the type of the passive we want to spawn.
         GameObject go = new GameObject(data.baseStats.name + " Passive");
         Passive p = go.AddComponent<Passive>();
         p.Initialise(data);
-        p.transform.SetParent(transform); //Set the weapon to be a child of the player
+        p.transform.SetParent(transform); 
         p.transform.localPosition = Vector2.zero;
 
-        // Assign the passive to the slot.
         passiveSlots[slotNum].Assign(p);
         passiveUI.Refresh();
 
@@ -227,7 +202,6 @@ public class PlayerInventory : MonoBehaviour
         return slotNum;
     }
 
-    // If we don't know what item is being added, this function will determine that.
     public int Add(ItemData data)
     {
         if (data is WeaponData) return Add(data as WeaponData);
@@ -235,8 +209,6 @@ public class PlayerInventory : MonoBehaviour
         return -1;
     }
 
-    // Overload so that we can use both ItemData or Item to level up an
-    // item in the inventory.
     public bool LevelUp(ItemData data)
     {
         Item item = Get(data);
@@ -244,31 +216,26 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
-    // Levels up a selected weapon in the player inventory.
     public bool LevelUp(Item item)
     {
-        // Tries to level up the item.
         if(!item.DoLevelUp())
         {
             Debug.LogWarning(string.Format(
-                "Failed to level up {0}.",
+                "Echec de la mise à niveau {0}.",
                  item.name
             ));
             return false;
         }
 
-        // Close the level up screen afterwards.
         if (GameManager.instance != null && GameManager.instance.choosingUpgrade)
         {
             GameManager.instance.EndLevelUp();
         }
 
-        // If it is a passive, recalculate player stats.
         if(item is Passive) player.RecalculateStats();
         return true;
     }
 
-    // Checks a list of slots to see if there are any slots left.
     int GetSlotsLeft(List<Slot> slots)
     {
         int count = 0;
@@ -279,25 +246,17 @@ public class PlayerInventory : MonoBehaviour
         return count;
     }
 
-    // Determines what upgrade options should appear.
     void ApplyUpgradeOptions()
     {
-        // <availableUpgrades> is the list of possible upgrades that we will populate from
-        // <allPossibleUpgrades>, which is a list of all available weapons and passives.
         List<ItemData> availableUpgrades = new List<ItemData>(availableWeapons.Count + availablePassives.Count);
         List<ItemData> allPossibleUpgrades = new List<ItemData>(availableWeapons);
         allPossibleUpgrades.AddRange(availablePassives);
 
-        // We need to know how many weapon / passive slots are left.
         int weaponSlotsLeft = GetSlotsLeft(weaponSlots);
         int passiveSlotsLeft = GetSlotsLeft(passiveSlots);
 
-        // Filters through the available weapons and passives and add those
-        // that can possibly be an option.
         foreach (ItemData data in allPossibleUpgrades)
         {
-            // If a weapon of this type exists, allow for the upgrade if the
-            // level of the weapon is not already maxed out.
             Item obj = Get(data);
             if (obj)
             {
@@ -305,101 +264,22 @@ public class PlayerInventory : MonoBehaviour
             }
             else
             {
-                // If we don't have this item in the inventory yet, check if
-                // we still have enough slots to take new items.
                 if (data is WeaponData && weaponSlotsLeft > 0) availableUpgrades.Add(data);
                 else if (data is PassiveData && passiveSlotsLeft > 0) availableUpgrades.Add(data);
             }
         }
 
-        // Pass the possible upgrades.
         bool getExtraItem = 1f - 1f / player.Stats.luck > UnityEngine.Random.value;
         if(getExtraItem) upgradeWindow.SetUpgrades(this, allPossibleUpgrades, 4);
-        else upgradeWindow.SetUpgrades(this, availableUpgrades, 3, "Increase your Luck stat for a chance to get 4 items!");
+        else upgradeWindow.SetUpgrades(this, availableUpgrades, 3, "Améliorer la stat de Chance pour pouvoir avoir 4 objets à choix!");
 
-        //// Iterate through each slot in the upgrade UI and populate the options.
-        //foreach (UpgradeUI upgradeOption in upgradeUIOptions)
-        //{
-        //    // If there are no more available upgrades, then we abort.
-        //    if (availableUpgrades.Count <= 0) return;
-
-        //    // Pick an upgrade, then remove it so that we don't get it twice.
-        //    ItemData chosenUpgrade = availableUpgrades[UnityEngine.Random.Range(0, availableUpgrades.Count)];
-        //    availableUpgrades.Remove(chosenUpgrade);
-
-        //    // Ensure that the selected weapon data is valid.
-        //    if (chosenUpgrade != null)
-        //    {
-        //        // Turns on the UI slot.
-        //        EnableUpgradeUI(upgradeOption);
-
-        //        // If our inventory already has the upgrade, we will make it a level up.
-        //        Item item = Get(chosenUpgrade);
-        //        if(item)
-        //        {
-        //            upgradeOption.upgradeButton.onClick.AddListener(() => LevelUp(item)); //Apply button functionality
-        //            if (item is Weapon)
-        //            {
-        //                Weapon.Stats nextLevel = ((WeaponData)chosenUpgrade).GetLevelData(item.currentLevel + 1);
-        //                upgradeOption.upgradeDescriptionDisplay.text = nextLevel.description;
-        //                upgradeOption.upgradeNameDisplay.text = chosenUpgrade.name + " - " + nextLevel.name;
-        //                upgradeOption.upgradeIcon.sprite = chosenUpgrade.icon;
-        //            }
-        //            else
-        //            {
-        //                Passive.Modifier nextLevel = ((PassiveData)chosenUpgrade).GetLevelData(item.currentLevel + 1);
-        //                upgradeOption.upgradeDescriptionDisplay.text = nextLevel.description;
-        //                upgradeOption.upgradeNameDisplay.text = chosenUpgrade.name + " - " + nextLevel.name;
-        //                upgradeOption.upgradeIcon.sprite = chosenUpgrade.icon;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            if(chosenUpgrade is WeaponData)
-        //            {
-        //                WeaponData data = chosenUpgrade as WeaponData;
-        //                upgradeOption.upgradeButton.onClick.AddListener(() => Add(chosenUpgrade)); //Apply button functionality
-        //                upgradeOption.upgradeDescriptionDisplay.text = data.baseStats.description;  //Apply initial description
-        //                upgradeOption.upgradeNameDisplay.text = data.baseStats.name;    //Apply initial name
-        //                upgradeOption.upgradeIcon.sprite = data.icon;
-        //            }
-        //            else
-        //            {
-        //                PassiveData data = chosenUpgrade as PassiveData;
-        //                upgradeOption.upgradeButton.onClick.AddListener(() => Add(chosenUpgrade)); //Apply button functionality
-        //                upgradeOption.upgradeDescriptionDisplay.text = data.baseStats.description;  //Apply initial description
-        //                upgradeOption.upgradeNameDisplay.text = data.baseStats.name;    //Apply initial name
-        //                upgradeOption.upgradeIcon.sprite = data.icon;
-        //            }
-
-        //        }
-        //    }
-        //}
     }
 
-    void RemoveUpgradeOptions()
-    {
-        //foreach (UpgradeUI upgradeOption in upgradeUIOptions)
-        //{
-        //    upgradeOption.upgradeButton.onClick.RemoveAllListeners();
-        //    DisableUpgradeUI(upgradeOption);    //Call the DisableUpgradeUI method here to disable all UI options before applying upgrades to them
-        //}
-    }
+
 
     public void RemoveAndApplyUpgrades()
     {
-        RemoveUpgradeOptions();
         ApplyUpgradeOptions();
     }
-
-    //void DisableUpgradeUI(UpgradeUI ui)
-    //{
-    //    ui.upgradeNameDisplay.transform.parent.gameObject.SetActive(false);
-    //}
-
-    //void EnableUpgradeUI(UpgradeUI ui)
-    //{
-    //    ui.upgradeNameDisplay.transform.parent.gameObject.SetActive(true);
-    //}
 
 }

@@ -6,12 +6,11 @@ using TMPro;
 public class UIStatDisplay : MonoBehaviour
 {
 
-    public PlayerStats player; // The player that this stat display is rendering stats for.
+    public PlayerStats player; 
     public bool displayCurrentHealth = false;
     public bool updateInEditor = false;
     TextMeshProUGUI statNames, statValues;
 
-    // Update this stat display whenever it is set to be active.
     void OnEnable()
     {
         UpdateStatFields();
@@ -26,16 +25,12 @@ public class UIStatDisplay : MonoBehaviour
     {
         if (!player) return;
 
-        // Get a reference to both Text objects to render stat names and stat values.
         if (!statNames) statNames = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         if (!statValues) statValues = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
 
-        // Render all stat names and values.
-        // Use StringBuilders so that the string manipulation runs faster.
         StringBuilder names = new StringBuilder();
         StringBuilder values = new StringBuilder();
 
-        // Add the current health to the stat box.
         if(displayCurrentHealth)
         {
             names.AppendLine("Health");
@@ -45,20 +40,16 @@ public class UIStatDisplay : MonoBehaviour
         FieldInfo[] fields = typeof(CharacterData.Stats).GetFields(BindingFlags.Public | BindingFlags.Instance);
         foreach (FieldInfo field in fields)
         {
-            // Render stat names.
             names.AppendLine(field.Name);
 
-            // Get the stat value.
             object val = field.GetValue(player.Stats);
             float fval = val is int ? (int)val : (float)val;
 
-            // Print it as a percentage if it has an attribute assigned and is a float.
             PropertyAttribute attribute = (PropertyAttribute)PropertyAttribute.GetCustomAttribute(field, typeof(PropertyAttribute));
             if (attribute != null && field.FieldType == typeof(float))
             {
                 float percentage = Mathf.Round(fval * 100 - 100);
 
-                // If the stat value is 0, just put a dash.
                 if (Mathf.Approximately(percentage, 0))
                 {
                     values.Append('-').Append('\n');
@@ -75,7 +66,6 @@ public class UIStatDisplay : MonoBehaviour
                 values.Append(fval).Append('\n');
             }
 
-            // Updates the fields with the strings we built.
             statNames.text = PrettifyNames(names);
             statValues.text = values.ToString();
         }
@@ -83,7 +73,6 @@ public class UIStatDisplay : MonoBehaviour
 
     public static string PrettifyNames(StringBuilder input)
     {
-        // Return an empty string if StringBuilder is empty.
         if (input.Length <= 0) return string.Empty;
 
         StringBuilder result = new StringBuilder();
@@ -92,13 +81,12 @@ public class UIStatDisplay : MonoBehaviour
         {
             char c = input[i];
 
-            // Check when to uppercase or add spaces to a character.
             if(last == '\0' || char.IsWhiteSpace(last))
             {
                 c = char.ToUpper(c);
             } else if (char.IsUpper(c))
             {
-                result.Append(' '); // Insert space before capital letter
+                result.Append(' '); 
             }
             result.Append(c);
 

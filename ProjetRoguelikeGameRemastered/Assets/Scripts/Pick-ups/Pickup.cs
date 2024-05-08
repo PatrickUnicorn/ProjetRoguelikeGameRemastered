@@ -3,12 +3,11 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public float lifespan = 0.5f;
-    protected PlayerStats target; // If the pickup has a target, then fly towards the target.
-    protected float speed; // The speed at which the pickup travels.
+    protected PlayerStats target; 
+    protected float speed; 
     Vector2 initialPosition;
     float initialOffset;
 
-    // To represent the bobbing animation of the object.
     [System.Serializable]
     public struct BobbingAnimation
     {
@@ -33,7 +32,6 @@ public class Pickup : MonoBehaviour
     {
         if(target)
         {
-            // Move it towards the player and check the distance between.
             Vector2 distance = target.transform.position - transform.position;
             if (distance.sqrMagnitude > speed * speed * Time.deltaTime)
                 transform.position += (Vector3)distance.normalized * speed * Time.deltaTime;
@@ -43,7 +41,6 @@ public class Pickup : MonoBehaviour
         }
         else
         {
-            // Handle the animation of the object.
             transform.position = initialPosition + bobbingAnimation.direction * Mathf.Sin((Time.time + initialOffset) * bobbingAnimation.frequency);
         }
     }

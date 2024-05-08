@@ -45,7 +45,7 @@ public abstract class Item : MonoBehaviour
 
         if (evolution.evolutionLevel > currentLevel + levelUpAmount)
         {
-            Debug.LogWarning(string.Format("Evolution failed. Current level {0}, evolution level {1}", currentLevel, evolution.evolutionLevel));
+            Debug.LogWarning(string.Format("Evolution a échouée. Niveau actuel {0}, niveau d'évolution {1} (8 objet actif, 5 objet passif)", currentLevel, evolution.evolutionLevel));
             return false;
         }
 

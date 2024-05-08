@@ -31,7 +31,6 @@ public class CharacterSelector : MonoBehaviour
             return instance.characterData;
         else
         {
-            // Randomly pick a character if we are playing from the Editor.
             #if UNITY_EDITOR
             string[] allAssetPaths = AssetDatabase.GetAllAssetPaths();
             List<CharacterData> characters = new List<CharacterData>();
@@ -47,7 +46,6 @@ public class CharacterSelector : MonoBehaviour
                 }
             }
 
-            // Pick a random character if we have found any characters.
             if (characters.Count > 0) return characters[Random.Range(0, characters.Count)];
             #endif
         }
@@ -59,7 +57,6 @@ public class CharacterSelector : MonoBehaviour
         characterData = character;
     }
 
-    // Destroys the character selector.
     public void DestroySingleton()
     {
         instance = null;

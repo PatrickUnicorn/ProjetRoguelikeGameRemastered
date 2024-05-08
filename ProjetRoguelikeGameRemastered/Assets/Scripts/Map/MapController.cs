@@ -14,7 +14,7 @@ public class MapController : MonoBehaviour
     [Header("Optimization")]
     public List<GameObject> spawnedChunks;
     GameObject latestChunk;
-    public float maxOpDist; //Must be greater than the length and width of the tilemap
+    public float maxOpDist;
     float opDist;
     float optimizerCooldown;
     public float optimizerCooldownDur;
@@ -44,7 +44,6 @@ public class MapController : MonoBehaviour
 
         CheckAndSpawnChunk(directionName);
 
-        // Check additional adjacent directions for diagonal chunks
         if (directionName.Contains("Up"))
         {
             CheckAndSpawnChunk("Up");
@@ -77,39 +76,39 @@ public class MapController : MonoBehaviour
 
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
-            // Moving horizontally more than vertically
+
             if (direction.y > 0.5f)
             {
-                // Also moving upwards
+
                 return direction.x > 0 ? "Right Up" : "Left Up";
             }
             else if (direction.y < -0.5f)
             {
-                // Also moving downwards
+
                 return direction.x > 0 ? "Right Down" : "Left Down";
             }
             else
             {
-                // Moving straight horizontally
+
                 return direction.x > 0 ? "Right" : "Left";
             }
         }
         else
         {
-            // Moving vertically more than horizontally
+
             if (direction.x > 0.5f)
             {
-                // Also moving right
+
                 return direction.y > 0 ? "Right Up" : "Right Down";
             }
             else if (direction.x < -0.5f)
             {
-                // Also moving left
+
                 return direction.y > 0 ? "Left Up" : "Left Down";
             }
             else
             {
-                // Moving straight vertically
+
                 return direction.y > 0 ? "Up" : "Down";
             }
         }
@@ -128,7 +127,7 @@ public class MapController : MonoBehaviour
 
         if (optimizerCooldown <= 0f)
         {
-            optimizerCooldown = optimizerCooldownDur;   //Check every 1 second to save cost, change this value to lower to check more times
+            optimizerCooldown = optimizerCooldownDur;   
         }
         else
         {

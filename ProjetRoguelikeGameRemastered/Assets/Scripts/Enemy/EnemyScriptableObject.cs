@@ -6,7 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyScriptableObject", menuName = "ScriptableObjects/Enemy")]
 public class EnemyScriptableObject : ScriptableObject
 {
-    //Base stats for the enemy
     [SerializeField]
     float moveSpeed;
     public float MoveSpeed { get => moveSpeed; private set => moveSpeed = value; }

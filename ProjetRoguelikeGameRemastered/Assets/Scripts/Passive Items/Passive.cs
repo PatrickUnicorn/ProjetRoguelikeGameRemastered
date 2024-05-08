@@ -1,9 +1,5 @@
 using UnityEngine;
 
-/// <summary>
-/// A class that takes an PassiveData and is used to increment a player's
-/// stats when received.
-/// </summary>
 public class Passive : Item
 {
 
@@ -15,7 +11,6 @@ public class Passive : Item
         public CharacterData.Stats boosts;
     }
 
-    // For dynamically created passives, call initialise to set everything up.
     public virtual void Initialise(PassiveData data)
     {
         base.Initialise(data);
@@ -28,19 +23,16 @@ public class Passive : Item
         return currentBoosts;
     }
 
-    // Levels up the weapon by 1, and calculates the corresponding stats.
     public override bool DoLevelUp()
     {
         base.DoLevelUp();
 
-        // Prevent level up if we are already at max level.
         if (!CanLevelUp())
         {
-            Debug.LogWarning(string.Format("Cannot level up {0} to Level {1}, max level of {2} already reached.", name, currentLevel, data.maxLevel));
+            Debug.LogWarning(string.Format("Ne peux pas améliorer {0} au niveau {1}, niveau max {2} déjà atteint", name, currentLevel, data.maxLevel));
             return false;
         }
 
-        // Otherwise, add stats of the next level to our weapon.
         currentBoosts += ((Modifier)data.GetLevelData(++currentLevel)).boosts;
         return true;
     }
