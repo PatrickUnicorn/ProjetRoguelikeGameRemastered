@@ -2482,7 +2482,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 327966802}
-  - component: {fileID: 327966801}
   - component: {fileID: 327966803}
   m_Layer: 0
   m_Name: Enemy Spawner
@@ -2491,40 +2490,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &327966801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327966800}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b87c040d2233fb429ead60ca78f76a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves: []
-  currentWaveCount: 0
-  enemiesAlive: 0
-  maxEnemiesAllowed: 100
-  maxEnemiesReached: 0
-  waveInterval: 60
-  relativeSpawnPoints:
-  - {fileID: 1553076690}
-  - {fileID: 272889872}
-  - {fileID: 1204367842}
-  - {fileID: 677598931}
-  - {fileID: 957630130}
-  - {fileID: 784398027}
-  - {fileID: 276709325}
-  - {fileID: 1665175860}
-  - {fileID: 37472732}
-  - {fileID: 116423745}
-  - {fileID: 1909090906}
-  - {fileID: 2043153236}
-  - {fileID: 1640406321}
-  - {fileID: 853620852}
-  - {fileID: 641570796}
 --- !u!4 &327966802
 Transform:
   m_ObjectHideFlags: 0
