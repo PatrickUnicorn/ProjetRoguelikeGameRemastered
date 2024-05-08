@@ -33,7 +33,7 @@ Objets "actifs":
 
 Objets "passifs":
   
-- **Ailes ** : Le personnage se déplace 10% plus vite.
+- **Ailes** : Le personnage se déplace 10% plus vite.
 - **Armure** : Réduit les dégâts entrants de 1. Augmente les dégâts de riposte de 10%.
 - **Brassard** : Augmente la vitesse des projectiles de 10%.
 - **Candelabrador** : Augmente la zone d'effet des attaques de 10%.
@@ -44,7 +44,7 @@ Objets "passifs":
 - **Pummarola** : Le personnage récupère 0,2 PV par seconde. (ceci est le catalyseur pour évoluer l'ail en Soul Eater)
 - **Tome Vierge** : Réduit le temps de recharge de toutes les armes de 8%.
 - **Trèfle** : Augmente la chance de 10%.
-- **Épinard ** : Augmente les dégâts infligés de 10%. 
+- **Épinard** : Augmente les dégâts infligés de 10%. 
 
 Ces objets sont conçus pour offrir une variété de tactiques et styles de jeu, permettant aux joueurs de personnaliser leur expérience selon leurs préférences.
 
