@@ -14,7 +14,7 @@ ProjetRoguelikeGameRemastered est un jeu de type roguelike où les joueurs doive
 
 ## Comment jouer
 
-1. **Installation :** Clonez le dépôt sur votre machine locale ou téléchargez le dernier build (Le "fichier" ProjetRoguelikeGameRemastered.zip)
+1. **Installation :** Clonez le dépôt sur votre machine locale ou téléchargez le dernier build (Le "fichier" ProjetRoguelikeGame.zip)
 2. **Exécution :** Ouvrez le projet avec Unity et exécutez-le depuis l'éditeur, ou lancez l'exécutable ( ProjetRoguelikeGameRemastered.exe une fois que vous avez tout extrait du .zip) que vous avez téléchargé.
 3. **Commandes :** Utilisez les flèches du clavier pour se déplacer et ainsi esquiver 
 
